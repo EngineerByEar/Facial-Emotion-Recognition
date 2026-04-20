@@ -13,7 +13,6 @@ The project covers the full pipeline:
 - Hyperparameter and architecture experimentation
 - Cross-model evaluation and comparison
 
----
 
 ## 🤖 Models
 
@@ -29,7 +28,6 @@ Seven model configurations were trained and evaluated:
 | **ResNet50 — Complex FC Last Layer (Weighted)** | Only the final layer unfrozen, with class weighting |
 | **ResNet50 — Full (Weighted)** | Full ResNet50 fine-tuning with class-weighted loss |
 
----
 
 ## 📊 Results
 
@@ -45,7 +43,6 @@ Seven model configurations were trained and evaluated:
 
 The **Custom CNN** outperformed all ResNet50 configurations, likely due to the domain mismatch between ImageNet pretraining and grayscale facial expression images in lower resolution.
 
----
 
 ## 🏗️ Architecture
 
@@ -67,7 +64,6 @@ All ResNet50 models use pretrained ImageNet weights. Variants differ along two a
 - **How much of the network is unfrozen** (last layer only vs. full fine-tuning)
 - **Whether class-weighted loss** is applied to handle FER2013's class imbalance
 
----
 
 ## 📁 Data
 
@@ -77,7 +73,6 @@ FER2013 contains ~35,000 grayscale 48×48 pixel face images across 7 emotion cla
 
 Data loading is handled by `data_load_utils.py`, which reads images from a folder structure organized by emotion label and returns them as NumPy arrays alongside their labels.
 
----
 
 ## 🔬 Experimentation
 
@@ -92,16 +87,12 @@ The notebooks in this repository document the full experimentation process:
 | `Training ResNet50-Weight-Distributed.ipynb` | Distributed weight experiments |
 | `Model Comparison.ipynb` | Cross-model evaluation |
 
----
-
 ## 🛠️ Tech Stack
 
 - **Framework:** PyTorch
 - **Pretrained Models:** torchvision (ResNet50, ResNet18)
 - **Data Handling:** Pillow, NumPy, Pandas
 - **Visualization:** Matplotlib
-
----
 
 ## 🚀 Possible Extensions
 
